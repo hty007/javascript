@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf‐8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    #man {
+      position: relative;
+      cursor: pointer;
+    }
+    #fon{
+      background-color:#c5c9c7;
+    }
+  </style>
+  <script src="script.js"></script>
+  
+</head>
+<body>
+<h1 >ПРМД и ПРУД</h1>
+<input id="acceleration" type="number" onchen value="0" 
+		onChange="option.a=+document.getElementById('acceleration').value" />
+<input id="velocity" type="number" value="20" 
+		onChange="option.v0 = +document.getElementById('velocity').value"/>
+<div id="fon" >
+  <img id="man" src="men.svg" width="10" 	height="40">
+</div>
+
+<button onclick="OnClick(option)"> Старт  </button> 
+<button onclick="Stop(option)"> Стоп  </button>
+<input id="distance" type="number" value="0"/>
+<script>
+	var option = {
+		elem:document.getElementById('man'),
+		distance:document.getElementById('distance'),
+		a: +document.getElementById('acceleration').value,
+		v0:+document.getElementById('velocity').value
+		 } 
+	</script>
+</body>
+</html>
